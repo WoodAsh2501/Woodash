@@ -22,7 +22,7 @@ html {
     font-size: 10px;
     font-family: Lora, 思源宋体, 宋体引号, "Times New Roman", Times, 宋体, serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 450;
     overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
@@ -68,8 +68,6 @@ a:hover {
     min-height: calc(5vh + 10px);
     -webkit-border-radius: 2em;
     border-radius: 3em;
-
-
 }
 
 header hr {

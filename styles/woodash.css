@@ -1,0 +1,187 @@
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora.ttf) format("truetype"),
+         url(../fonts/Lora-Italic.ttf) format("truetype");
+    /* 使中文引号全宽显示 */
+    unicode-range: U+0-2017, U+201A-201B, U+201E-10FFFF;
+}
+
+@font-face {
+    font-family: 宋体引号;
+    src: local(宋体),
+         local(SimSum);
+    unicode-range: U+2018, U+2019, U+201C, U+201D; 
+}
+
+@font-face {
+    font-family: 思源宋体;
+    src: url(../fonts/SourceHanSerifSC-VF.otf.woff2) format("woff");
+}
+
+::selection {
+    background: #e1c8ff;
+    color: #8e4fdb;
+}
+
+a {
+    color: inherit;
+}
+
+a:link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1.5px solid;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+html {
+    font-size: 10px;
+    font-family: Lora, 思源宋体, 宋体引号, "Times New Roman", Times, 宋体, serif;
+    font-style: normal;
+    font-weight: 500;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+main,
+footer {
+    font-size: calc(1.5rem + 0.5vw);
+}
+
+
+body {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    min-height: calc(5vh + 10px);
+    -webkit-border-radius: 2em;
+    border-radius: 3em;
+}
+
+header {
+    display: table;
+    height: 100vh;
+    font-size: calc(4em + 3vw);
+}
+
+.page-header {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.page-header-title,
+.page-header-about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.page-header-title {
+    margin-bottom: 1lh;
+    width: 8em;
+}
+
+.page-header-title > div {
+    line-height: 1lh;
+    flex-grow: 1;
+}
+
+.page-header-about {
+    display: grid;
+    width: 9em;
+    grid-template-rows: repeat(2, 1lh);
+}
+
+#page-header-arrow {
+    position: absolute;
+    right: 10vw;
+    align-self: self-end;
+    z-index: -1;
+}
+
+.page-header-about-text {
+    background: linear-gradient(to right, rgb(255, 255, 255, 100%) 93.75%, rgb(255, 255, 255, 0));
+    line-height: 1lh;
+    white-space: nowrap;
+}
+
+#ash {
+    text-align: right;
+    align-self: self-end;
+}
+
+#asterisk {
+    -webkit-animation: rotate 6s linear infinite;
+    text-align: center;
+    transform-origin: 50% 35%;
+    color: #8e4fdb;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.page-content {
+    display: grid;
+    grid-template: repeat(2, auto);
+}
+
+main {
+    margin-top: 2lh;
+    min-height: 100vh;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+#column-left {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.column-left {
+    width: calc(12rem + 9vw);
+    height: 2lh;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    flex-grow: 1;
+}
+
+#column-left-3 {
+    grid-template-rows: 1.2lh auto;
+    height: 3lh;
+}
+
+.nav {
+    width: 2em;
+}
+
+#column-left-box {
+    position: sticky;
+    top: 10vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+
+}
