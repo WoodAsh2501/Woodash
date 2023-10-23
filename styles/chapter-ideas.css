@@ -1,0 +1,25 @@
+h1 {
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* 散落一地 */
+section:nth-child(odd) {
+    text-align: left;
+}
+section:nth-child(even) {
+    text-align: right;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.info {
+    color: #aaa;
+}
+
+main {
+    margin-bottom: 8rem;
+}

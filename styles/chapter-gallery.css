@@ -1,0 +1,40 @@
+h1 {
+    margin: 0 auto;
+    text-align: justify;
+}
+
+article {
+    margin-bottom: 8rem;
+}
+
+.article-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.article-title,
+.article-date{
+    font-size: calc(1.5rem + 0.5vw);
+    margin: 0 0;
+    line-height: 1.5;
+}
+
+.article-title {
+    margin-right: 2em;
+}
+
+.article-date {
+    color: #aaa;
+    display: block;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.article-summary {
+    text-align: justify;
+}
+
+#article-header-title {
+    margin-right: 2em;
+}

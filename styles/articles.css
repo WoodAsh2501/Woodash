@@ -1,0 +1,48 @@
+p,
+blockquote,
+li{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+blockquote {
+    border-left: 0.2em solid #eee;
+    border-right: 0.2em solid #eee;
+    margin: 0 auto;
+    padding: 0.5em 0.5em;
+}
+
+cite::before {
+    content: "——";
+}
+
+blockquote p {
+    margin-top: 0;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    color: #aaa;
+    margin-top: -0.5lh;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+section {
+    margin-top: 8rem;
+}
+
+/* 结束 */
+section:last-child::after{
+    content: "结束";
+    display: block;
+    margin: 8rem 0;
+    text-align: right;
+    color: #aaa;
+}
+
+#signature {
+    text-align: right;
+    margin-top: 8rem;
+}

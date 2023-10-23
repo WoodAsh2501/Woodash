@@ -1,0 +1,23 @@
+#sunset {
+    position: relative;
+    z-index: -1;
+width:auto;
+/* width: 100%; */
+height: 80rem;
+margin-top: -80rem;
+bottom: -10rem;
+    background: linear-gradient(rgb(0, 0, 0, 0), #ff7c3e);
+    /* background-color: red; */
+}
+
+section:last-child::after{
+    color: rgb(255, 109, 35);
+}
+
+footer {
+    color: rgb(255, 109, 35);
+}
+
+.page-footer-flex {
+    border-color: rgb(255, 109, 35);
+}

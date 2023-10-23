@@ -1,0 +1,29 @@
+article {
+    flex-grow: 1;
+    margin-bottom: 8rem;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+p,
+li {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+section {
+    margin-top: 8rem;
+}
+
+#last-edit-time {
+    text-align: right;
+    color: #aaa;
+    margin-top: 8rem;
+}
+
+#signature {
+    text-align: right;
+    margin-top: 8rem;
+}

@@ -1,0 +1,48 @@
+h1 {
+    margin: 0 auto;
+    text-align: justify;
+}
+.title {
+    margin: 0.5em 0;
+}
+
+.info {
+    line-height: 1.25;
+}
+
+.gallery {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    grid-gap: 1em;
+    margin-bottom: 6rlh;
+}
+
+.card {
+    width: 170px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    padding: 1em 0.5em;
+}
+
+.card-content {
+    margin:0;
+
+}
+.card img {
+    border-radius: 3px;
+    max-width: 150px;
+}
+
+.card div {
+    text-align: center;
+}
+
+.info {
+    color: #aaaaaa;
+}
+
+main {
+    margin-bottom: 8rem;
+}

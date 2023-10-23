@@ -1,0 +1,18 @@
+p,
+li{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+section {
+    margin-top: 8rem;
+}
+
+/* 结束 */
+
+#signature {
+    color: #aaaaaa;
+    text-align: right;
+    /* margin-top: 8rem; */
+    margin: 8rem 0;
+}

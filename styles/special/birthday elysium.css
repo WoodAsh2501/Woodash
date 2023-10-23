@@ -1,0 +1,44 @@
+p{
+    text-align: justify;
+    line-height: 1.75;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 4em;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 10.5em 2em auto;
+}
+
+.in {
+    text-align-last: justify;
+    color: #8e4fdb;
+}
+.ex {
+    text-align: right;
+    text-align-last:auto ;
+}
+
+.hyphen {
+    text-align: center;
+}
+.hyphen::before {
+    content: "-";
+}
+
+.text {
+    text-align: justify;
+}
+
+/* 结束 */
+article::after {
+    content: "结束";
+    display: block;
+    margin: 8rem 0;
+    text-align: right;
+    color: #aaa;
+}
