@@ -240,3 +240,9 @@ footer {
 g {
     color: #aaaaaa;
 }
+
+abbr[title] {
+    border-bottom: 2px solid;
+    border-color:#e1c8ff;
+    text-decoration: none;
+}
