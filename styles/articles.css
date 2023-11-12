@@ -18,6 +18,7 @@ cite::before {
 
 blockquote p {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 cite {
@@ -34,7 +35,7 @@ section {
 }
 
 /* 结束 */
-section:last-child::after{
+article::after{
     content: "结束";
     display: block;
     margin: 8rem 0;
