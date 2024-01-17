@@ -35,6 +35,16 @@ section {
     margin-top: 8rem;
 }
 
+img {
+    display: block;
+    width: min(90vw, 500px);
+    margin: 0 auto;
+}
+
+.bigimg {
+    width: 100%;
+}
+
 /* 结束 */
 article::after{
     content: "结束";
