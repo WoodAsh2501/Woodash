@@ -6,6 +6,21 @@ li{
     line-height: 1.5;
 }
 
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: inherit;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 0.2em 0.5em;
+}
+
+button:hover {
+    background-color: #e1c8ff;
+    border-color: #8e4fdb;
+    color: #8e4fdb;
+}
+
 blockquote {
     border-left: 0.2em solid #eee;
     border-right: 0.2em solid #eee;
