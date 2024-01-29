@@ -52,13 +52,43 @@ section {
 
 img {
     display: block;
-    width: min(90vw, 500px);
+    width: min(100%, 500px);
     margin: 0 auto;
 }
 
 .bigimg {
     width: 100%;
 }
+
+.imgs {
+    display: flex;
+    /* height: min(500px, 50vh); */
+    /* width: fit-content ; */
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.imgs > figure {
+    margin: 0;
+    width: auto;
+}
+
+figure img {
+    /* height: 100%; */
+    width: 100%;
+    margin: 0;
+}
+
+figcaption {
+    /* position: absolute; */
+    margin: 0.3em;
+
+
+    text-align: center;
+    font-size: smaller;
+    color: #aaa;
+}
+
 
 /* 结束 */
 article::after{
@@ -72,4 +102,8 @@ article::after{
 #signature {
     text-align: right;
     margin-top: 8rem;
+}
+
+#article-header-tags::before {
+    content: "#";
 }
