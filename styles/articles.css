@@ -64,7 +64,6 @@ img {
     display: flex;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 2em;
 }
 
 .imgs > figure {
