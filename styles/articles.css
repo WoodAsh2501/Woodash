@@ -62,8 +62,7 @@ img {
 
 .imgs {
     display: flex;
-    /* height: min(500px, 50vh); */
-    /* width: fit-content ; */
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 2em;
 }
@@ -74,16 +73,12 @@ img {
 }
 
 figure img {
-    /* height: 100%; */
-    width: 100%;
+    width: auto;
     margin: 0;
 }
 
 figcaption {
-    /* position: absolute; */
     margin: 0.3em;
-
-
     text-align: center;
     font-size: smaller;
     color: #aaa;
