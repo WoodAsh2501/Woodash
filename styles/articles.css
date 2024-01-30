@@ -71,7 +71,7 @@ img {
 }
 
 figure img {
-    width: auto;
+    width: 100%;
     margin: 0;
 }
 
