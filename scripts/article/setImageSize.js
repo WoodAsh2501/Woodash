@@ -1,8 +1,3 @@
-console.log("来自 Woodash 的你好！")
-
-// --图片等高--
-
-
 let imgs = document.querySelectorAll("figure img");
 let sumRatio = 0;
 for (let i = 0; i < imgs.length; i++) {
@@ -11,11 +6,11 @@ for (let i = 0; i < imgs.length; i++) {
     sumRatio += ratio;
 }
 // 页面第一次加载好的时候重设图片宽度
-setImageWidth();
+setImageSize();
 // 窗口大小变更时再次重设图片宽度
-window.addEventListener('resize', setImageWidth);
+window.addEventListener('resize', setImageSize);
 
-function setImageWidth() {
+function setImageSize() {
     let article = document.querySelector("article");
     let height = article.offsetWidth / sumRatio;
     
@@ -23,4 +18,6 @@ function setImageWidth() {
         const img = imgs[i];
         img.style.height = height + 'px';
     }
+
+    console.log("已重设图片尺寸")
 }
