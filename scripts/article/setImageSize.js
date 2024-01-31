@@ -22,7 +22,7 @@ function checkImagesLoaded() {
         sumRatio += ratio;
     }
     imgsLoaded = (flag) ? true : false;  
-    console.log(sumRatio);
+    // console.log(sumRatio);
 
     if (imgsLoaded) {
         setImageSize();
@@ -39,9 +39,14 @@ function setImageSize() {
     let height = article.offsetWidth / sumRatio;
     // console.log(article.offsetWidth, sumRatio, height);
 
+    const header = document.querySelector(".page-header");
+    let contentHeight = 0.9 * (window.innerHeight - header.offsetHeight);
+
+    // console.log(contentHeight);
+
     for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
-        img.style.height = height + 'px';
+        img.style.height = 'min(' + contentHeight + 'px,' + height + 'px)';
         img.style.width = "auto";
     }
 }
