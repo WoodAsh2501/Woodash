@@ -44,6 +44,9 @@ function setImageSize() {
 
     // console.log(contentHeight);
 
+    const imgsFlex = document.querySelector(".imgs");
+    imgsFlex.style.width = 'fit-content'; 
+
     for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
         img.style.height = 'min(' + contentHeight + 'px,' + height + 'px)';
