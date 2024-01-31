@@ -3,3 +3,6 @@
 tempCodeRunnerFile.exe
 .vscode/launch.json
 
+.vscode/settings.json
+.templates
+.gitignore
