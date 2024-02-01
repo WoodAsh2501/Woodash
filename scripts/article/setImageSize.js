@@ -1,6 +1,6 @@
 // 如果图片的load事件能正确触发的话就不用废这么大力气轮询了，感觉幽默
 
-const imgs = document.querySelectorAll("figure img");
+const imgs = document.querySelectorAll(".imgs img");
 let sumRatio = 0;
 let imgsLoaded = false;
 
@@ -37,7 +37,7 @@ function setImageSize() {
     }
     let article = document.querySelector("article");
     let height = article.offsetWidth / sumRatio;
-    // console.log(article.offsetWidth, sumRatio, height);
+    console.log(article.offsetWidth, sumRatio, height);
 
     const header = document.querySelector(".page-header");
     let contentHeight = 0.9 * (window.innerHeight - header.offsetHeight);
@@ -52,4 +52,5 @@ function setImageSize() {
         img.style.height = 'min(' + contentHeight + 'px,' + height + 'px)';
         img.style.width = "auto";
     }
+    console.log("重设图片尺寸成功！")
 }
