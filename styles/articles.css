@@ -66,11 +66,13 @@ img {
     margin: 0 auto;
 }
 
-.imgs > figure {
+figure {
     margin: 0;
 }
 
-figure img {
+/* 选择 imgs 中的图片 */
+
+.imgs img {
     width: 100%;
     margin: 0;
 }
