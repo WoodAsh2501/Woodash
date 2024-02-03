@@ -23,6 +23,7 @@ a {
     color: inherit;
     height: 1lh;
     /* height: 1.25lh; */
+    width: -moz-fit-content;
     width: fit-content;
 }
 
