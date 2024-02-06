@@ -4,7 +4,7 @@ const smoothController = document.getElementById("smoothController");
 const fluentController = document.getElementById("fluentController");
 
 const fireTarget = document.getElementById("fire");
-let totalHeight = 50;
+let totalHeight = 32;
 let totalWidth = 128;
 // 火焰根部高度
 let bottomHeight = totalHeight * 0.1;
@@ -65,9 +65,9 @@ function randomFlame(asciiArray) {
 
     for (xPos = 0; xPos < totalWidth; xPos++) {
         let heightScaler = 0;
-        heightScaler += subFlame(0.5, 0.5, 0.4);
-        heightScaler += subFlame(center1, radius1, 0.4);
-        heightScaler += subFlame(center2, radius2, 0.2);
+        heightScaler += subFlame(0.5, 0.5, 0.7);
+        heightScaler += subFlame(center1, radius1, 0.2);
+        heightScaler += subFlame(center2, radius2, 0.1);
 
         let height = randomInt(bottomHeight, totalHeight, heightScaler);
         
