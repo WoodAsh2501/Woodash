@@ -7,6 +7,11 @@
 }
 
 @font-face {
+  font-family: FiraCode;
+  src: url(../fonts/FiraCode-VF.ttf) format("truetype");
+}
+
+@font-face {
   font-family: 宋体引号;
   src: local(宋体), local(SimSum);
   unicode-range: U+2014, U+2015, U+2018, U+2019, U+201C, U+201D;
