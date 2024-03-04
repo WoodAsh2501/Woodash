@@ -1,10 +1,10 @@
 // 如果图片的load事件能正确触发的话就不用废这么大力气轮询了，感觉幽默
-
-const imgs = document.querySelectorAll(".imgs img");
-let sumRatio = 0;
-let imgsLoaded = false;
-
-// 加载完成时重设尺寸
+const imgsContainer = document.querySelectorAll(".imgs");
+for (let i = 0; i < imgsContainer.length; i++) {
+    const imgs = imgsContainer[i].querySelectorAll("img");
+    let sumRatio = 0;
+    let imgsLoaded = false;
+    // 加载完成时重设尺寸
 let timer = setInterval(checkImagesLoaded, 500);
 
 // 窗口大小变更时重设图片尺寸
@@ -54,3 +54,5 @@ function setImageSize() {
     }
     console.log("重设图片尺寸成功！")
 }
+}
+
