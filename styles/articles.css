@@ -128,8 +128,3 @@ article::after{
 #article-header-tags::before {
     content: "#";
 }
-
-del {
-    color: #aaaaaa;
-    text-decoration: none;
-}
