@@ -16,7 +16,7 @@
   <link href="../styles/normalize.css" rel="stylesheet" />
   <link href="../styles/basic.css" rel="stylesheet" />
   <link href="../styles/articles.css" rel="stylesheet" />
-
+  <script defer src="../scripts/article/setImageSize.js"></script>
 </head>
 
 <body>
