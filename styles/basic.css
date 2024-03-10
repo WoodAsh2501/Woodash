@@ -1,14 +1,24 @@
 @font-face {
   font-family: Lora;
-  src: url(../fonts/Lora.ttf) format("truetype"),
-    url(../fonts/Lora-Italic.ttf) format("truetype");
-  /* 使中文引号全宽显示 */
+  src: url(../fonts/Lora.ttf) format("truetype");
+  font-style: normal;
+  /* 使中文引号、破折号正确显示 */
+  unicode-range: U+0-2013, U+2016-2017, U+201A-201B, U+201E-10FFFF;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url(../fonts/Lora-Italic.ttf) format("truetype");
+  font-style: italic;
+  /* 使中文引号、破折号正确显示 */
   unicode-range: U+0-2013, U+2016-2017, U+201A-201B, U+201E-10FFFF;
 }
 
 @font-face {
   font-family: FiraCode;
   src: url(../fonts/FiraCode-VF.ttf) format("truetype");
+  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -59,6 +69,8 @@ html {
   font-family: Lora, "Source Han Serif SC VF", 宋体引号, "Times New Roman",
     Times, 宋体, SimSun, serif;
   font-style: normal;
+  /* 禁止伪斜体与伪加粗 */
+  font-synthesis: none;
   font-weight: 530;
   font-variation-settings: "wght" 530;
   overflow-x: hidden;
