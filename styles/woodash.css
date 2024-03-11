@@ -280,6 +280,7 @@ article:first-child {
 .article-title {
     margin: 0;
     font-weight: 500;
+    font-variation-settings: "wght" 500;
     font-size: 2em;
 }
 

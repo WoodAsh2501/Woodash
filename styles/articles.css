@@ -67,9 +67,20 @@ cite {
     display: block;
     text-align: right;
     color: #aaa;
-    margin-top: -0.5lh;
+    margin-top: 0.5lh;
     margin-bottom: 0;
-    font-style: italic;
+}
+
+strong {
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 630;
+    font-variation-settings: "wght" 630;
 }
 
 section {
