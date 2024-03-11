@@ -1,16 +1,31 @@
 // 如果图片的load事件能正确触发的话就不用废这么大力气轮询了，感觉幽默
-const imgsContainer = document.querySelectorAll(".imgs");
-for (let i = 0; i < imgsContainer.length; i++) {
-    const imgs = imgsContainer[i].querySelectorAll("img");
-    let sumRatio = 0;
-    let imgsLoaded = false;
+const imgsDiv = document.querySelectorAll(".imgs");
+
+const imgsFlex = document.querySelector(".imgs");
+imgsFlex.style.width = 'fit-content';
+
+for (let i = 0; i < imgsDiv.length; i++) {
+    const imgsPerLine = imgsDiv[i].querySelectorAll("img");
     // 加载完成时重设尺寸
-let timer = setInterval(checkImagesLoaded, 500);
 
-// 窗口大小变更时重设图片尺寸
-window.addEventListener('resize', setImageSize);
+    let timerToCheckLoaded;
+    timerToCheckLoaded = setInterval(() => {
+        let loaded = checkImagesLoaded(imgsPerLine);
+        if (loaded) {
+            let sumRatio = countRatio(imgsPerLine);
+            setImageSize(imgsPerLine, sumRatio);
+            clearInterval(timerToCheckLoaded);
+        }
+    }, 500);
 
-function checkImagesLoaded() {
+    // 窗口大小变更时重设图片尺寸
+    window.addEventListener('resize', () => {
+        let sumRatio = countRatio(imgs);
+        setImageSize(imgsPerLine, sumRatio)
+    });
+}
+
+function checkImagesLoaded(imgs) {
     let flag = true;
     for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
@@ -18,34 +33,35 @@ function checkImagesLoaded() {
             flag = false;
             break;
         };
+    }
+    loaded = (flag) ? true : false;
+    // console.log(sumRatio);
+    return loaded;
+}
+
+function countRatio(imgs) {
+    let sumRatio = 0;
+    for (let i = 0; i < imgs.length; i++) {
+        const img = imgs[i];
         let ratio = img.naturalWidth / img.naturalHeight;
         sumRatio += ratio;
     }
-    imgsLoaded = (flag) ? true : false;  
-    // console.log(sumRatio);
-
-    if (imgsLoaded) {
-        setImageSize();
-        clearInterval(timer);
-    }
+    return sumRatio;
 }
 
-function setImageSize() {
+function setImageSize(imgs, ratio) {
     // 如果加载错误就不重设尺寸
-    if (sumRatio === 0) {
+    if (ratio === 0) {
         return
     }
     let article = document.querySelector("article");
-    let height = article.offsetWidth / sumRatio;
-    console.log(article.offsetWidth, sumRatio, height);
+    let height = article.offsetWidth / ratio;
+    console.log(article.offsetWidth, ratio, height);
 
     const header = document.querySelector(".page-header");
     let contentHeight = 0.9 * (window.innerHeight - header.offsetHeight);
 
     // console.log(contentHeight);
-
-    const imgsFlex = document.querySelector(".imgs");
-    imgsFlex.style.width = 'fit-content'; 
 
     for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
@@ -54,5 +70,3 @@ function setImageSize() {
     }
     console.log("重设图片尺寸成功！")
 }
-}
-
