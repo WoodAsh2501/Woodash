@@ -140,7 +140,8 @@ article::after{
     content: "#";
 }
 
-del {
+del, 
+del a{
     color: #aaaaaa;
     text-decoration: none;
 }
