@@ -44,6 +44,7 @@
 }
 
 a {
+  text-align: justify;
   color: inherit;
   height: 1.25em;
   box-sizing: border-box;
