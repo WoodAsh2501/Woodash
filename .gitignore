@@ -1,8 +1,6 @@
 .vscode
-
 tempCodeRunnerFile.exe
-.vscode/launch.json
-
-.vscode/settings.json
 .templates
+.gitignore
+**/desktop.ini
 .gitignore
