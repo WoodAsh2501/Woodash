@@ -10,8 +10,7 @@
     <meta name="description" content="技术与美学与数字花园" />
     <meta name="author" content="woodash" />
     <meta name="date" content="$date$" />
-    
-    <meta name="woodash-welcome" content="$welcome$" />
+
     <meta name="woodash-title" content="$title$" />
     <meta name="woodash-category" content="$category$" />
     <meta name="woodash-note" content="$note$" />
