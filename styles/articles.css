@@ -78,8 +78,10 @@ strong {
 h1,
 h2,
 h3 {
+    text-align: justify;
     font-weight: 630;
     font-variation-settings: "wght" 630;
+    line-height: 1.4;
 }
 
 section {
