@@ -143,4 +143,7 @@ del,
 del a{
     color: #aaaaaa;
     text-decoration: none;
+    --greyscale: 60%;
+    -webkit-filter: grayscale(var(--greyscale));
+    filter: grayscale(var(--greyscale));
 }
