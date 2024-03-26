@@ -162,13 +162,25 @@ header {
 } */
 
 #asterisk {
+    animation: rotate 6s linear infinite;
     -webkit-animation: rotate 6s linear infinite;
     -webkit-user-drag: none;
+    user-select: none;
     display: inline;
     margin: auto;
     transform-origin: 50% 50%;
     width: calc(0.4em + 0.3vw);
     height: calc(0.4em + 0.3vw);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
 @-webkit-keyframes rotate {
