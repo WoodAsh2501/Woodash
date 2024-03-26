@@ -149,3 +149,55 @@ del a{
     -webkit-filter: grayscale(var(--greyscale));
     filter: grayscale(var(--greyscale));
 }
+
+#board {
+    display: flex;
+    height: 1lh;
+    width: 100%;
+    text-align: right;
+    margin-top: -0.5rem;
+}
+
+#return {
+    font-size: 80%;
+    color: #aaa;
+}
+
+#asterisk {
+    height: 50%;
+    width: auto;
+    margin: auto 0 auto auto;
+    display: inline-block;
+    justify-content: flex-end;
+
+    animation: rotate 6s linear infinite;
+    -webkit-animation: rotate 6s linear infinite;
+    transform-origin: 50% 50%;
+    -webkit-user-drag: none;
+    user-select: none;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.article-header {
+    margin-top: 4rem;
+}
