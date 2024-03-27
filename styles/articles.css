@@ -5,6 +5,11 @@ li{
     line-height: 1.5;
 }
 
+/* 防止某些元素浮在顶栏上层 */
+article {
+    z-index: -1;
+}
+
 button {
     display: block;
     margin: 0 auto;
