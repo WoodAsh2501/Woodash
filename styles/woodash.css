@@ -127,15 +127,16 @@ header {
         margin: 0 auto;
         margin-top: 1lh;
     }
-    .page-header-title {
-        width: auto;
-    }
+    /* .page-header-title { */
+        /* width: auto; */
+    /* } */
     .page-header-about {
-        /* display: block; */
+        display: block;
     }
     .page-header-about-text {
         text-align: left;
     }
+
 
     }
 
@@ -212,7 +213,7 @@ main {
     text-wrap: nowrap;
 }
 
-#column-left div {
+.column-left {
     width: calc(12rem + 9vw);
     display: grid;
     white-space: nowrap;
@@ -273,6 +274,23 @@ main {
     #nav-contact {
         margin-top: 0.5em;
     }
+}
+
+@media screen and (max-width: 480px) {
+    .column-left {
+        display: flex;
+        flex-direction: column;
+        width: 2em;
+        margin-right: 2em;
+        gap: 0.5em;
+    }
+    #nav-experience,
+    #nav-notes,
+    #nav-links,
+    #nav-contact {
+        margin-top: 0;
+    }
+
 }
 
 #column-right {
