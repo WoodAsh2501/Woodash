@@ -112,7 +112,7 @@ header {
     position: absolute;
     right: 10vw;
     align-self: self-end;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .page-header-about-text {
