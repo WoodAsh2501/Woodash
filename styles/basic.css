@@ -134,6 +134,8 @@ footer {
   overflow-x: hidden;
   overflow-y: hidden;
   top: 0;
+  /* 防止某些元素浮在顶栏上 */
+  z-index: 100;
 }
 
 #page-header-about {
