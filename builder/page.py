@@ -5,6 +5,16 @@ from bs4 import Comment
 
 from globalVar import *
 
+
+def getTagText(_tag):
+    if _tag.string:
+        return _tag.string.strip()
+    elif _tag.text:
+        return _tag.text.strip()
+    else:
+        return _tag.get_text().strip()
+
+
 class Page:
     def __init__(
         self,
@@ -32,6 +42,7 @@ class Page:
             head = _head
             styleList = head.find_all("link", rel="stylesheet")
             styleList = map(str, styleList)
+            styleList = list(set(styleList))
             self.style = styleList
 
         def setTitle(self):
@@ -40,12 +51,12 @@ class Page:
 
             self.title = Path(self.path).stem
 
-        def setSummaryForWeekly(self, _body):
+        def setNoteForWeekly(self, _body):
             if self.category and self.category != "weekly":
                 return
 
             titles = _body.find_all("h2")
-            titles = map(lambda x: x.string.strip(), titles)
+            titles = list(map(getTagText, titles))
             ignoreList = ["索引", "生活", "摘录", "网页", "创作", "图像", "结"]
             summary = [title for title in titles if title not in ignoreList]
             self.note = "/".join(summary)
@@ -64,7 +75,7 @@ class Page:
             setCategoryForIndex(self)
             setTitleForIndex(self)
 
-        def setMeta(self, _head, _attrDict):
+        def setWoodashAttrs(self, _head, _attrDict):
             head = _head
             attrDict = _attrDict
             attrs = (attr for attr in attrDict.keys())
@@ -80,11 +91,13 @@ class Page:
             head = content.head
             body = content.body
 
+            setWoodashAttrs(self, head, attrDict)
             setTitle(self)
             setForIndex(self)
             setStyles(self, head)
-            setSummaryForWeekly(self, body)
-            setMeta(self, head, attrDict)
+            setNoteForWeekly(self, body)
+
+            print(self.title)
 
     def edit(self):
 
@@ -164,13 +177,12 @@ class Page:
                 hasBoard = _body.find(id="board")
                 if not hasBoard:
                     boardTag = content.new_tag("div", id="board")
-                    boardTag.string = boardString
                     article.insert(0, boardTag)
                 else:
-                    board = article.find(id="board")
-                    board.string = boardString
-
-                board.prettify()
+                    boardTag = article.find(id="board")
+                    
+                boardTag.string = boardString
+                boardTag.prettify()
 
             def setContents(self, _body):
                 if self.category != "weekly":
@@ -179,19 +191,17 @@ class Page:
 
                 hasContents = article.find(id="索引")
                 if not hasContents:
-                    contentsTag = content.new_tag("section", id="索引", _class="level2")
+                    contentsTag = content.new_tag("section", id="索引", class_="level2")
                     articleHeader = article.header
                     articleHeader.insert_after(contentsTag)
                 else:
                     contentsTag = article.find(id="索引")
 
                 titles = article.find_all(class_="level2")
-                contentsTag = content.new_tag("section")
-                contentsTag["id"] = "索引"
-                contentsTag["class"] = "level2"
 
                 def turnIntoListItem(_titleTag):
-                    name = _titleTag.h2.string.strip()
+                    h2Tag = _titleTag.h2
+                    name = getTagText(h2Tag).strip()
                     id = _titleTag.get("id")
                     string = f'<li><a href="#{id}">{name}</a></li>'
                     return string
@@ -226,9 +236,6 @@ def getPages(_category, _directory):
     categoryDir = directory / category
 
     def createPage(_fileName, _category):
-        # a = Page(path=Path(_fileName), category=_category)
-        # a.setAttrs()
-        # a.edit()
         return Page(path=Path(_fileName), category=_category)
 
     pages = list(map(lambda x: createPage(x, category), categoryDir.iterdir()))
@@ -241,4 +248,3 @@ def formatPage(_page):
     _page.setAttrs()
     _page.edit()
     return _page
-
