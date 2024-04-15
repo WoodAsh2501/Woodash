@@ -70,7 +70,8 @@ cite {
     margin-bottom: 0;
 }
 
-strong {
+strong,
+b {
     font-weight: 700;
     font-variation-settings: "wght" 700;
 }
