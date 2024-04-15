@@ -2,17 +2,16 @@ from pathlib import Path
 from textwrap import dedent, indent
 from bs4 import BeautifulSoup
 from bs4 import Comment
+import re
 
 from globalVar import *
 
 
 def getTagText(_tag):
-    if _tag.string:
-        return _tag.string.strip()
-    elif _tag.text:
-        return _tag.text.strip()
-    else:
-        return _tag.get_text().strip()
+    string = _tag.string if _tag.string else _tag.text
+    string = string.strip()
+    string = re.sub("\s+", " ", string)
+    return string
 
 
 class Page:
@@ -180,7 +179,7 @@ class Page:
                     article.insert(0, boardTag)
                 else:
                     boardTag = article.find(id="board")
-                    
+
                 boardTag.string = boardString
                 boardTag.prettify()
 
