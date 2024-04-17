@@ -40,8 +40,14 @@ class Page:
         def setStyles(self, _head):
             head = _head
             styleList = head.find_all("link", rel="stylesheet")
-            styleList = map(str, styleList)
+            styleList = map(lambda x: x["href"], styleList)
+            styleOrder = {
+                "https://ik.imagekit.io/Woodash/SourceHanSerifSC-VF/result.css": -2,
+                "../styles/normalize.css": -1,
+                "../styles/basic.css": 0,
+            }
             styleList = list(set(styleList))
+            styleList.sort(key=lambda x: styleOrder.get(x, 1))
             self.style = styleList
 
         def setTitle(self):
@@ -135,7 +141,7 @@ class Page:
                                 """
                 headTemplate = dedent(headTemplate)
                 for style in self.style:
-                    headTemplate += f"""{style}"""
+                    headTemplate += f"""<link href="{style}" rel="stylesheet"/>"""
                     headTemplate += "\n"
 
                 headTemplate += dedent(
