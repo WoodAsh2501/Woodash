@@ -255,7 +255,7 @@ footer {
 
 /* 链接悬浮显示纹样 */
 
-/* @media (any-hover: hover) { */
+@media (any-hover: hover) {
   body::before {
     content: "";
     position: fixed;
@@ -282,7 +282,7 @@ footer {
   body:has(a:hover)::before {
     opacity: 1;
   }
-/* } */
+}
 
 /* 以下为特殊样式 */
 .grey {
