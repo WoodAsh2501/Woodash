@@ -253,6 +253,37 @@ footer {
   text-align: right;
 }
 
+/* 链接悬浮显示纹样 */
+
+/* @media (any-hover: hover) { */
+  body::before {
+    content: "";
+    position: fixed;
+    height: 200%;
+  
+    background-image: url("../images/sigil.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+  
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s;
+  
+    overflow: hidden;
+  }
+  
+  body:has(a:hover)::before {
+    opacity: 1;
+  }
+/* } */
+
 /* 以下为特殊样式 */
 .grey {
   color: #aaaaaa;
