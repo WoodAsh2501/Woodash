@@ -216,7 +216,7 @@ class Page:
                     string = f'<li><a href="#{id}">{name}</a></li>'
                     return string.strip()
 
-                contentsString = f"""<section><h2>索引</h2>
+                contentsString = f"""<section class="level2" id="索引"><h2>索引</h2>
                                 <ul>
                                 {"".join(map(turnIntoListItem, titles))}
                                 </ul></section>"""
