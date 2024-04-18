@@ -14,5 +14,5 @@ categoryDict = {
     "records": "琐记",
     "notes": "笔记",
 }
-ignoreList = ["半燃其零・钻木求火码后记"]
+
 directory = Path("../")

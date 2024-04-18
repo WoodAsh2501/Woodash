@@ -6,6 +6,10 @@ import re
 
 from globalVar import *
 
+dontEditBodyList = [
+    "半燃其零・钻木求火码后记",
+]
+
 
 def getTagText(_tag):
     if not _tag:
@@ -158,10 +162,10 @@ class Page:
             updateHead(self, head)
             addWelcome(self, head)
 
-        def editBody(self, _body, _ignoreList):
+        def editBody(self, _body):
             if self.category == "index":
                 return
-            if self.title in _ignoreList:
+            if self.title in dontEditBodyList:
                 return
 
             def setDate(self, _body):
@@ -230,7 +234,7 @@ class Page:
             body = content.body
 
             editHead(self, head)
-            editBody(self, body, ignoreList)
+            editBody(self, body)
 
             HTML.seek(0)
             HTML.truncate(0)

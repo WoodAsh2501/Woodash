@@ -4,6 +4,11 @@ from bs4 import BeautifulSoup
 
 from globalVar import *
 
+hiddenList = [
+    "尚未启程之旅",
+]
+
+
 def updateCategoryIndex(_pages, _category):
     articles = [
         f"""
@@ -24,7 +29,7 @@ def updateCategoryIndex(_pages, _category):
         </article>
         """
         for page in _pages
-        if page.category != "index"
+        if page.category != "index" and page.title not in hiddenList
     ]
 
     articleString = "".join(articles)
@@ -62,7 +67,7 @@ def updateMainIndex(_pages):
         </article>
         """
         for page in _pages
-        if page.category != "index"
+        if page.category != "index" and page.title not in hiddenList
     ]
     articleString = "".join(articles)
     with open(mainIndex, "r+", encoding="utf-8") as HTML:
