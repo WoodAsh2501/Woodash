@@ -16,3 +16,9 @@ section {
     /* margin-top: 8rem; */
     margin: 8rem 0;
 }
+
+/* 禁用常规文章样式 */
+
+article::after{
+    content: "";
+}
