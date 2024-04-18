@@ -8,6 +8,8 @@ from globalVar import *
 
 
 def getTagText(_tag):
+    if not _tag:
+        return
     string = _tag.string if _tag.string else _tag.text
     string = string.strip()
     string = re.sub("\s+", " ", string)
@@ -102,8 +104,6 @@ class Page:
             setStyles(self, head)
             setNoteForWeekly(self, body)
 
-            print(self.title)
-
     def edit(self):
 
         def editHead(self, _head):
@@ -193,28 +193,36 @@ class Page:
                 if self.category != "weekly":
                     return
                 article = _body.article
+                titles = article.find_all(attrs={"class": "level2"})
 
-                hasContents = article.find(id="索引")
+                hasContents = article.find(
+                    "section", attrs={"id": "索引", "class": "level2"}
+                )
                 if not hasContents:
-                    contentsTag = content.new_tag("section", id="索引", class_="level2")
+                    contentsTag = content.new_tag(
+                        "section", attrs={"id": "索引", "class": "level2"}
+                    )
                     articleHeader = article.header
                     articleHeader.insert_after(contentsTag)
                 else:
-                    contentsTag = article.find(id="索引")
-
-                titles = article.find_all(class_="level2")
+                    contentsTag = article.find(
+                        "section", attrs={"id": "索引", "class": "level2"}
+                    )
 
                 def turnIntoListItem(_titleTag):
                     h2Tag = _titleTag.h2
                     name = getTagText(h2Tag).strip()
+                    if name == "索引":
+                        return
                     id = _titleTag.get("id")
                     string = f'<li><a href="#{id}">{name}</a></li>'
-                    return string
+                    return string.strip()
 
-                contentsTag.string = f"""<h2>索引</h2>
-                                                <ul>
-                                                {"".join(map(turnIntoListItem, titles))}
-                                                </ul>"""
+                contentsString = f"""<section><h2>索引</h2>
+                                <ul>
+                                {"".join(map(turnIntoListItem, titles))}
+                                </ul></section>"""
+                contentsTag.replace_with(BeautifulSoup(contentsString, "html.parser"))
 
             body = _body
 
