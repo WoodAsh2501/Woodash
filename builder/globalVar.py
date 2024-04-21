@@ -16,3 +16,7 @@ categoryDict = {
 }
 
 directory = Path("../")
+
+hiddenList = [
+    "尚未启程之旅",
+]

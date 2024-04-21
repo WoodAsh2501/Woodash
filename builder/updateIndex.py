@@ -1,13 +1,8 @@
 from pathlib import Path
-from textwrap import dedent, indent
+from textwrap import dedent
 from bs4 import BeautifulSoup
 
 from globalVar import *
-
-hiddenList = [
-    "尚未启程之旅",
-]
-
 
 def updateCategoryIndex(_pages, _category):
     articles = [
