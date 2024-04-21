@@ -1,6 +1,8 @@
 from globalVar import *
 from updateIndex import updateCategoryIndex, updateMainIndex
 import page
+from RSSgenerator import generateRSS
+
 
 allPages = []
 for category in categorys:
@@ -11,3 +13,5 @@ for category in categorys:
 
 allPages.sort(key=lambda x: x.date, reverse=True)
 updateMainIndex(allPages)
+
+generateRSS(allPages)

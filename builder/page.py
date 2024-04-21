@@ -31,6 +31,7 @@ class Page:
         date="",
         path="",
         style="",
+        link="",
     ):
         self.title = title
         self.category = category
@@ -41,6 +42,7 @@ class Page:
 
         self.path = path
         self.style = style
+        self.link= link
 
     def setAttrs(self):
         def setStyles(self, _head):
@@ -48,9 +50,10 @@ class Page:
             styleList = head.find_all("link", rel="stylesheet")
             styleList = map(lambda x: x["href"], styleList)
             styleOrder = {
-                "https://ik.imagekit.io/Woodash/SourceHanSerifSC-VF/result.css": -2,
-                "../styles/normalize.css": -1,
-                "../styles/basic.css": 0,
+                "https://ik.imagekit.io/Woodash/SourceHanSerifSC-VF/result.css": -3,
+                "../styles/normalize.css": -2,
+                "../styles/basic.css": -1,
+                "../styles/article.css": 0,
             }
             styleList = list(set(styleList))
             styleList.sort(key=lambda x: styleOrder.get(x, 1))
@@ -61,6 +64,10 @@ class Page:
                 return
 
             self.title = Path(self.path).stem
+
+        def setLink(self):
+            link = f"woodash.cc/{self.category}/{self.title}.html"
+            self.link = link
 
         def setNoteForWeekly(self, _body):
             if self.category and self.category != "weekly":
@@ -104,6 +111,7 @@ class Page:
 
             setWoodashAttrs(self, head, attrDict)
             setTitle(self)
+            setLink(self)
             setForIndex(self)
             setStyles(self, head)
             setNoteForWeekly(self, body)
@@ -239,7 +247,6 @@ class Page:
             HTML.seek(0)
             HTML.truncate(0)
             HTML.write(content.prettify(formatter=None))
-
 
 def getPages(_category, _directory):
     category = _category
