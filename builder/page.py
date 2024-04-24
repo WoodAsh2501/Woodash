@@ -150,6 +150,7 @@ class Page:
                                 
                                 <link rel="icon" href="../images/favicon.ico" />
                                 <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
+                                <link rel="alternate" type="application/rss+xml" title="Woodash * RSS" href="../feed.xml" />
                                 """
                 headTemplate = dedent(headTemplate)
                 for style in self.style:
