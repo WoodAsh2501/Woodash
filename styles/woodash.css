@@ -236,13 +236,34 @@ main {
     vertical-align: bottom;
 }
 
-#nav-links,
+/* #nav-links,
 #nav-contact {
-    /* line-height: 1lh; */
     height: 1;
     height: 1lh;
     align-self: self-end;
+} */
+
+#column-left-4 {
+    display: flex;
+    gap: 0.3em;
+
+    a,
+    img {
+        width: 1em;
+        height: 1em;
+    }
+
+    a:hover {
+        border:none;
+        outline: 1.5px #e1c8ff solid;
+        border-radius: 4px;
+    }
 }
+
+/* #column-left-4 * {
+
+} */
+
 
 
 .nav {
