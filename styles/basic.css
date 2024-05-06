@@ -27,7 +27,7 @@
   unicode-range: U+2014, U+2015, U+2018, U+2019, U+201C, U+201D;
 }
 
-::selection {
+*::selection {
   background: #e1c8ff;
   color: #8e4fdb;
 }
