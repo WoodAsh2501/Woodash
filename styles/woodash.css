@@ -1,17 +1,31 @@
 @font-face {
     font-family: Lora;
-    src: url(../fonts/Lora.ttf) format("truetype"),
-         url(../fonts/Lora-Italic.ttf) format("truetype");
-    /* 使中文引号全宽显示 */
-    unicode-range: U+0-2017, U+201A-201B, U+201E-10FFFF;
-}
-
-@font-face {
+    src: url(../fonts/Lora.ttf) format("truetype");
+    font-style: normal;
+    /* 使中文引号、破折号正确显示 */
+    unicode-range: U+0-2013, U+2016-2017, U+201A-201B, U+201E-10FFFF;
+  }
+  
+  @font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora-Italic.ttf) format("truetype");
+    font-style: italic;
+    /* 使中文引号、破折号正确显示 */
+    unicode-range: U+0-2013, U+2016-2017, U+201A-201B, U+201E-10FFFF;
+  }
+  
+  @font-face {
+    font-family: FiraCode;
+    src: url(../fonts/FiraCode-VF.ttf) format("truetype");
+    font-style: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
     font-family: 宋体引号;
-    src: local(宋体),
-         local(SimSum);
-    unicode-range: U+2018, U+2019, U+201C, U+201D; 
-}
+    src: local(宋体), local(SimSum);
+    unicode-range: U+2014, U+2015, U+2018, U+2019, U+201C, U+201D;
+  }
 
 *::selection {
     background: #e1c8ff;
