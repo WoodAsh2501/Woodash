@@ -9,6 +9,14 @@
 <image><url>images/favicon.ico</url></image>
 
 <item>
+<title>半燃其五十・瞳分裂</title>
+<category>weekly</category>
+<pubDate>2024-10-09</pubDate>
+<description><![CDATA[<article><section class=level2 id=我嘞个前端><h2>我嘞个前端</h2><p>放假最后几天，我把技术组考核的前端项目写完了。学了 <code>      Vue     </code> 和 <code>      Tailwind CSS     </code> ，感觉确实很好。虽说原计划是国庆读书弹琴看动漫的，感觉什么都没完成。<p>朋友放假出去玩，哥们放假做前端，感觉这辈子是有了。你可以点 <a href=https://github.com/WoodAsh2501/BYRTeam-homepage-re> 这个仓库 </a> 看看是什么个情况……不过回家躺了几天，还是挺舒服的。请看这周的周报吧。</section><section class=level2 id=生活><h2>生活</h2><p>看了《 <a href=https://movie.douban.com/subject/36354084/> 雪迷宫 </a> 》，一部讲东北禁毒的电视剧。放假在家也没什么事，所以和家里一起看了电视剧。前面还挺有意思的，但是感觉后面就没那么好了。<p><del> 豆瓣说这是改耽，我看的时候没感觉有什么要素，可能豆友的磕点比较神秘…… </del></section><section class=level2 id=网页><h2>网页</h2><section class=level3 id=东半球最强法务部终出手但事情并没有这么简单><h3><a href=https://www.gcores.com/articles/188768> 「东半球最强法务部」终出手，但事情并没有这么简单？ </a></h3><p>这篇文章讲了任天堂对《幻兽帕鲁》的起诉。这下好似了。不过我分享的原因是因为我刚知道卡比原来是一位律师的名字，先前只知道是美国任天堂从员工列表里选的（</section><section class=level3 id=爆火的-ai-智能眼镜被做成了新的偷拍人肉神器><h3><a href=https://www.ifanr.com/1601397> 爆火的 AI 智能眼镜，被做成了新的「偷拍、人肉神器」 </a></h3><p>这篇文章介绍了智能眼镜的隐私风险。实属哈人……</section><section class=level3 id=当女孩成为武器追忆被遗忘的战时人工算力><h3><a href=https://sspai.com/post/92219> 当女孩成为武器：追忆被遗忘的战时人工算力 </a></h3><p>这篇文章介绍了旧时的「计算员」团体，当时担任这一工作的大多为女性，曾负责战争中的数学运算。感觉写的还不错 <del> 虽然评论说写的很差。 </del></section></section><section class=level2 id=神人-ipv6><h2>神人 IPv6</h2><p>我离校之前把我的电脑设置好，准备远程访问。等我回到家里，才发现一个事情：家里的网络没有 IPv6。<p>好吧，所以我研究了一天没找到怎么开，于是打电话给运营商。运营商说他那边已经给我打开了，但是我又折腾了半天还是上不了，中途把桥接搞爆炸了，叫了一个师傅过来修。<p>但是修好之后还是没有 IPv6……所以我又叫了两个师傅过来修。我给师傅展示我的 <code>      ipconfig     </code> 输出，上面只有一个 fe80 开头的地址。然而师傅没看出来有什么问题。好吧，看样子不是每一个修网的工程师都懂得计算机网络的。他们打电话叫了大哥，聊了半天还是没聊明白，然后我直接和大哥聊了一会，终于问题是解决了。<p>过程中我还把我的显示器搞坏了……不管怎么说，现在我是可以连上我的电脑了。好吧，这下子更懂远程开发的问题了。</section><section class=level2 id=体验一则飞机着陆><h2>体验一则：飞机着陆</h2><p>在广播播响即将着陆的通知之后，我收起我的电脑，百无聊赖。于是打开我的 Walkman，决定听会歌。<p>最近很喜欢扫拨，还是打开了 Jason Becker 的《 <a href=https://music.163.com/song?id=1497056> Altitudes </a> 》。在 Marty 的片段结束的那一刻，飞机起落架接触到地面，然后神圣的扫拨段落响起……我浑身震颤，在座位上顿了许久……</section><section class=level2 id=顿悟一则><h2>顿悟一则</h2><p>不要把最懂得玩乐的日子（和脑子）出卖给实用主义、商品化、和无趣乏味的现实……</section><section class=level2 id=每逢返校><h2>每逢返校……</h2><p>一想到要回学校压力就很大……这是当时写下的话：<blockquote><p>睡不着于是紧盯着天花板……我依稀地看见噪波，像卫星电视飘散的雪花，然后思维拉扯成过度思考的网络，此起彼伏。我看见我永远敲击键盘，永远疲于奔命，永远一叶障目，永远无能为力。我努力地，想找些不一样的画面，却感觉瞳仁开始分裂，变成麻麻的、最密堆积的复眼……</blockquote><blockquote><p>人生目标：在 27 岁之前做出能触动一百个人的东西。先从一个人开始！</blockquote></section><section class=level2 id=创作><h2>创作</h2><p>给部门的 PDF 做了一张封面，不过不能偷跑！</section><section class=level2 id=结><h2>结</h2><p>这就是 2024 年 9 月 30 日至 10 月 5 日、今年第 40 周、学期第 6 周的周报了。原来都已经五十期了，离一周年也快了呢……下周见！</section></article>]]></description>
+<link>https://woodash.cc/weekly/半燃其五十・瞳分裂.html</link>
+</item>
+
+<item>
 <title>半燃其四十九・再见了，珍藏的二次元</title>
 <category>weekly</category>
 <pubDate>2024-09-25</pubDate>
