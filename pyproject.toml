@@ -1,0 +1,10 @@
+[project]
+name = "woodash"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bs4>=0.0.2",
+    "minify-html>=0.16.4",
+]
