@@ -50,7 +50,7 @@ class Page:
             styleList = head.find_all("link", rel="stylesheet")
             styleList = map(lambda x: x["href"], styleList)
             styleOrder = {
-                "https://ik.imagekit.io/Woodash/SourceHanSerifSC-VF/result.css": -3,
+                "https://media.woodash.cc/fonts/SourceHanSerifSC-VF/result.css": -3,
                 "../styles/normalize.css": -2,
                 "../styles/basic.css": -1,
                 "../styles/article.css": 0,
@@ -149,7 +149,7 @@ class Page:
                                 <meta name="woodash-scene" content="{self.scene}">
                                 
                                 <link rel="icon" href="../images/favicon.ico" />
-                                <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
+                                <link rel="preconnect" href="https://media.woodash.cc" crossorigin />
                                 <link rel="alternate" type="application/rss+xml" title="Woodash * RSS" href="../feed.xml" />
                                 """
                 headTemplate = dedent(headTemplate)

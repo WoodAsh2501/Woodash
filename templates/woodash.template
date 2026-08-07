@@ -18,9 +18,9 @@
     <meta name="woodash-scene" content="$scene$" />
 
     <link rel="icon" href="../images/favicon.ico" />
-    <link rel="preconnect" href="https://ik.imagekit.io" crossorigin />
+    <link rel="preconnect" href="https://media.woodash.cc" crossorigin />
     <link
-      href="https://ik.imagekit.io/Woodash/SourceHanSerifSC-VF/result.css"
+      href="https://media.woodash.cc/fonts/SourceHanSerifSC-VF/result.css"
       rel="stylesheet"
     />
     <link href="../styles/normalize.css" rel="stylesheet" />
